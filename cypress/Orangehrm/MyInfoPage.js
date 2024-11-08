@@ -24,6 +24,13 @@ class MyInfoPage {
         cy.get(MY_INFO_PAGE.assertSuccessMessage).should('exist');
         cy.wait(3000);
     }
+
+    assertEditedDataVisible() {
+        cy.get(MY_INFO_PAGE.firstname).should('have.value', editPrfileConstants.firstName);
+        cy.get(MY_INFO_PAGE.middlename).should('have.value', editPrfileConstants.middleName);
+        cy.get(MY_INFO_PAGE.lastname).should('have.value', editPrfileConstants.lastName);
+        cy.get(MY_INFO_PAGE.gender).should('be.checked');
+    }
 }
 export default MyInfoPage
 

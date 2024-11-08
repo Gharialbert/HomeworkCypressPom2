@@ -16,6 +16,7 @@ describe('OrangeHRM Login and My Info Edit Test', () => {
         myInfoPage.selectGender();
         myInfoPage.clickSaveButton();
         myInfoPage.assertSuccessMessage();
+        myInfoPage.assertEditedDataVisible();
     });
 });
 
